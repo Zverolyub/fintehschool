@@ -1,0 +1,1960 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S4</id>
+	<name>Проверка формы заказа сим-карты</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Проверка полей ввода данных</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Проверка поля &quot;Контактный телефон&quot;</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C2</id>
+				<title>Ввод корректного номера телефона (10 цифр, первая цифра 9)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле &quot;Контактный телефон&quot;</preconds>
+										<steps>1. Заполнить поле валидными данными 9111111111
+2. Нажать Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C3</id>
+				<title>Ввод номера телефона (10 цифр, первая цифра НЕ 9)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле &quot;Контактный телефон&quot;</preconds>
+										<steps>1. Заполнить поле &quot;Контактный телефон&quot; данными 1111111111
+2. Нажать Enter</steps>
+										<expected>1. Номер не принят.
+2. Выводится ошибка &quot;Код оператора должен начинаться с цифры 9&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C4</id>
+				<title>Ввод номера телефона (9 цифр)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле &quot;Контактный телефон&quot;</preconds>
+										<steps>1. Заполнить поле данными 111111111
+2. Нажать Enter</steps>
+										<expected>1. Номер не принят.
+2. Выводится ошибка &quot;Номер телефона должен состоять из 10 цифр, начиная с кода оператора&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C5</id>
+				<title>Ввод номера телефона (11 цифр)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле &quot;Контактный телефон&quot;</preconds>
+										<steps>1. Заполнить поле данными 11111111111
+2. Нажать Enter</steps>
+										<expected>1. Номер не принят.
+2. Выводится ошибка &quot;Номер телефона должен состоять из 10 цифр, начиная с кода оператора&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C6</id>
+				<title>Ввод номера телефона 9 цифр и 1 буква</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле &quot;Контактный телефон&quot;</preconds>
+										<steps>1. Заполнить поле данными 911111111а
+2. Нажать Enter</steps>
+										<expected>1. Номер не принят.
+2. Буквенный символ не введен.
+3. Выводится ошибка &quot;Номер телефона должен состоять из 10 цифр, начиная с кода оператора&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C7</id>
+				<title>Ввод номера телефона 9 цифр и 1 спецсимвол</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле &quot;Контактный телефон&quot;</preconds>
+										<steps>1. Заполнить поле данными 911111111&amp;
+2. Нажать Enter</steps>
+										<expected>1. Номер не принят.
+2. Буквенный символ не введен.
+3. Выводится ошибка &quot;Номер телефона должен состоять из 10 цифр, начиная с кода оператора&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C8</id>
+				<title>Пустой ввод</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в полре &quot;Контактный телефон&quot;</preconds>
+										<steps>1. Установить курсор в поле
+2. Нажать Enter</steps>
+										<expected>1. Номер не принят.
+2. Выводится ошибка &quot;Необходимо указать номер телефона&quot;</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Проверка поля &quot;Область&quot;</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C9</id>
+				<title>Выбор области из выпадающего списка</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Ваш город или регион“</preconds>
+										<steps>1. Кликните по полю “Ваш город или регион“
+2. Выберите первый предложенный вариант из выпадающего списка</steps>
+										<expected>1. Выбранное значение принято
+</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C10</id>
+				<title>Выбор области ручным набором (смешанный регистр) + подсказкой фильтра</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Ваш город или регион“</preconds>
+										<steps>1. Кликните по полю “Ваш город или регион“
+2. Удалите предложенный формой вариант.
+3. Начните вводить &quot;Арз&quot;
+4. Выберите из выпадающего списка первый предложенный вариант.
+</steps>
+										<expected>1. Выбранное значение принято
+</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C11</id>
+				<title>Выбор области ручным набором (нижний регистр) + подсказкой фильтра</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Ваш город или регион“</preconds>
+										<steps>1. Кликните по полю “Ваш город или регион“
+2. Удалите предложенный формой вариант.
+3. Начните вводить &quot;арз&quot;
+4. Выберите из выпадающего списка первый предложенный вариант.
+</steps>
+										<expected>1. Выбранное значение принято
+</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C12</id>
+				<title>Выбор области ручным набором (верхний регистр) + подсказкой фильтра</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Ваш город или регион“</preconds>
+										<steps>1. Кликните по полю “Ваш город или регион“
+2. Удалите предложенный формой вариант.
+3. Начните вводить &quot;АРЗ&quot;
+4. Выберите из выпадающего списка первый предложенный вариант.
+</steps>
+										<expected>1. Выбранное значение принято
+</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C13</id>
+				<title>Ввод только цифр</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Ваш город или регион“</preconds>
+										<steps>1. Кликните по полю “Ваш город или регион“
+2. Удалите предложенный формой вариант.
+3. Введите &quot;11111&quot;
+4. Нажмите Enter
+
+
+</steps>
+										<expected>1. Значение не принято
+2. Ошибка &quot;Введите другой регион&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C14</id>
+				<title>Ввод только спецсимволов</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Ваш город или регион“</preconds>
+										<steps>1. Кликните по полю “Ваш город или регион“
+2. Удалите предложенный формой вариант.
+3. Введите &quot;&amp;&amp;&amp;&amp;&quot;
+4. Нажмите Enter
+
+
+</steps>
+										<expected>1. Значение не принято
+2. Ошибка &quot;Введите другой регион&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C15</id>
+				<title>Пустой ввод</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Ваш город или регион“</preconds>
+										<steps>1. Кликните по полю “Ваш город или регион“
+2. Удалите предложенный формой вариант.
+3. Нажмите Enter
+
+
+</steps>
+										<expected>1. Значение не принято
+2. Ошибка &quot;Введите другой регион&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C16</id>
+				<title>Ввод набора букв</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Ваш город или регион“</preconds>
+										<steps>1. Кликните по полю “Ваш город или регион“
+2. Удалите предложенный формой вариант.
+3. Введите &quot;Трунь&quot;
+3. Нажмите Enter
+
+
+</steps>
+										<expected>1. Значение не принято
+2. Ошибка &quot;Введите другой регион&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C67</id>
+				<title>Ввод области на английском</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Ваш город или регион“</preconds>
+										<steps>1. Кликните по полю “Ваш город или регион“
+2. Удалите предложенный формой вариант.
+3. Введите &quot;Yport&quot;
+3. Нажмите Enter
+
+
+</steps>
+										<expected>1. Значение не принято
+2. Ошибка &quot;Введите другой регион&quot;</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Проверка поля &quot;ФИО&quot;</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C18</id>
+				<title>Ввод Фамилия(пробел)Имя(пробел)Отчество (кириллица)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите Петров Петр Петрович
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C19</id>
+				<title>Ввод Фамилия(пробел)Имя (кириллица)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите Петров Петр 
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C20</id>
+				<title>Ввод сложносоставных ФИО с дефисом Фамилия-Фамилия(пробел)Имя-Имя(пробел)Отчество-Отчество (кириллица)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите Петров-Иванов Петр-Василий Сергеевич-Иванович
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C21</id>
+				<title>Ввод сложносоставных ФИО Фамилия(пробел)Фамилия(пробел)Имя(пробел)Имя(пробел)Отчество(пробел)Отчество (кириллица)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите Петров Иванов Петр Василий Сергеевич Иванович Санта Мария Гера
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C22</id>
+				<title>Ввод ФИО в нижнем регистре (кириллица)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите петров петр сергеевич 
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C23</id>
+				<title>Ввод ФИО в верхнем регистре (кириллица)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите ПЕТРОВ МАТВЕЙ ИВАНОВИЧ 
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C24</id>
+				<title>Ввод ФИО в смешанном регистре (кириллица)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите ПеТрОв МаТвЕЙ ИВаНоВиЧ 
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C25</id>
+				<title>Ввод ФИО с буквой Ё (кириллица)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите Королёва Ёлка Ёлизаровна 
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C26</id>
+				<title>Ввод ФИО, начинающихся с букв Ъ, Ь (кириллица)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите Ъоролёва Ьлка Ълизаровна 
+2. Нажмите Enter</steps>
+										<expected>1. Данные не приняты. Появляется ошибка &quot;Проверьте корректность вводимых данных&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C27</id>
+				<title>Ввод Имя(пробел)Отчество(пробел)Фамилия (кириллица)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите Елена Витальевна Шныга
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C28</id>
+				<title>Ввод Отчество(пробел)Имя(пробел)Фамилия (кириллица)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите Витальевна Елена Шныга
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C29</id>
+				<title>Проверка доступности ввода ФИО copy+past (кириллица)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь скопировал из text-редактора ФИО &quot;Иванов Иван Иванович&quot;
+Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Установите курсор в поле &quot;ФИО&quot;
+2. Нажмите cmd/ctrl+v 
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C30</id>
+				<title>Проверка доступности ввода ФИО (english)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите ФИО Smith John
+2. Нажмите Enter</steps>
+										<expected>1. Ошибка &quot;Допустимо использовать только буквы русского алфавита и дефис&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C31</id>
+				<title>Проверка доступности ввода абстрактной строки без пробелов</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите ФИО Ивановстолтабуретович
+2. Нажмите Enter</steps>
+										<expected>1. Ошибка &quot;Недостаточно информации. Введите фамилию, имя и отчество через пробел (Например: Иванов Иван Алексеевич)&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C32</id>
+				<title>Проверка длины строки &gt;133 символов</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите ФИО из 134 символов &quot;Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Ол&quot; 
+2. Нажмите Enter</steps>
+										<expected>1. Ошибка &quot;Максимальное количество символов – 133&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C78</id>
+				<title>Проверка длины строки =133 символов</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите ФИО из 133 символов &quot;Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся О&quot; 
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C33</id>
+				<title>Проверка доступности ввода цифр</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите 33 333 333
+2. Нажмите Enter</steps>
+										<expected>1. Ошибка &quot;Допустимо использовать только буквы русского алфавита и дефис&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C34</id>
+				<title>Проверка доступности пустого ввода</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Установите курсор в поле ФИО
+2. Нажмите Enter</steps>
+										<expected>1. Ошибка &quot;Укажите ваше ФИО&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C35</id>
+				<title>Проверка доступности ввода ФИО copy+past (english)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь скопировал из text-редактора ФИО &quot;Smith John&quot;
+Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Установите курсор в поле &quot;ФИО&quot;
+2. Нажмите cmd/ctrl+v 
+2. Нажмите Enter</steps>
+										<expected>1. Ошибка &quot;Допустимо использовать только буквы русского алфавита и дефис&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C36</id>
+				<title>Проверка возможности удаления введенных данных</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Фамилия, имя и отчество“</preconds>
+										<steps>1. Введите Пупкин Виталий Витальевич
+2. Нажмите Enter
+3. Поставьте курсор в поле ФИО
+4. Удалите введенные данные</steps>
+										<expected>1. Данные доступны для удаления</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Проверка поля &quot;Email&quot;</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C37</id>
+				<title>Ввод корректного адреса email в нижнем регистре</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите ivan@mail.ru
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C38</id>
+				<title>Ввод корректного адреса email в верхнем регистре</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите IVAN@MAIL.RU
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C39</id>
+				<title>Пустой ввод</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Установите курсор в поле &quot;Электронная почта&quot;
+2. Нажмите Enter</steps>
+										<expected>1. Курсор переходит на следующее для заполнения поле</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C40</id>
+				<title>Ввод Email с цифрами в имени пользователя</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите 45ivan@mail.ru
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C41</id>
+				<title>Ввод Email с цифрами в доменной части</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите ivan@m55ail.ru
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C42</id>
+				<title>Ввод email с дефисом в имени пользователя</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите iv-an@mail.ru
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C43</id>
+				<title>Ввод email с дефисом в доменном имени</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите ivan@ma-il.ru
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C44</id>
+				<title>Ввод email с нижним подчеркиванием в имени пользователя</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите iv_an@mail.ru
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C45</id>
+				<title>Ввод email с нижним подчеркиванием в доменном имени</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите ivan@ma_il.ru
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C46</id>
+				<title>Ввод email с . в качестве первого знака в имени пользователя</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите .ivan@mail.ru
+2. Нажмите Enter</steps>
+										<expected>1. Ошибка &quot;Введите корректный адрес эл. почты&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C47</id>
+				<title>Ввод email с двумя точками в доменном имени</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите ivan@ma.il.ru
+2. Нажмите Enter</steps>
+										<expected>1. Появляется “зеленая галка” подтверждающая корректность ввода</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C48</id>
+				<title>Ввод email без . в доменном части</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите ivan@mailru
+2. Нажмите Enter</steps>
+										<expected>1. Ошибка &quot;Введите корректный адрес эл. почты&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C49</id>
+				<title>Ввод email длиной &gt;50 знаков</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите email длиной 51 символ nivanivnivanivanivanivanivanivanivanivanvan@mail.ru
+2. Нажмите Enter</steps>
+										<expected>1. Ошибка &quot;Максимальное количество символов – 50&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C104</id>
+				<title>Ввод email длиной =50 знаков</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите email длиной 50 символ nivanivnivnivanivanivanivanivanivanivanvan@mail.ru
+2. Нажмите Enter</steps>
+										<expected>Значение принято: индикатор &quot;зеленая галка&quot; в конце строки</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C50</id>
+				<title>Ввод email без @ в доменном части</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите ivanmail.ru
+2. Нажмите Enter</steps>
+										<expected>1. Ошибка &quot;Введите корректный адрес эл. почты&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C51</id>
+				<title>Ввод email c @@ в доменном части</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите ivan@@mail.ru
+2. Нажмите Enter</steps>
+										<expected>1. Ошибка &quot;Введите корректный адрес эл. почты&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C52</id>
+				<title>Ввод email c @ в качестве первого символа</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите @mail.ru
+2. Нажмите Enter</steps>
+										<expected>1. Электронный адрес не принят. Ошибка &quot;Введите корректный адрес эл. почты&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C53</id>
+				<title>Ввод email, где между @ и . нет имени домена</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите ivan@.ru
+2. Нажмите Enter</steps>
+										<expected>1. Электронный адрес не принят. Ошибка &quot;Введите корректный адрес эл. почты&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C54</id>
+				<title>Ввод email с пробелами в имени пользователя</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите iv an@.ru
+2. Нажмите Enter</steps>
+										<expected>1. Электронный адрес не принят. Ошибка &quot;Введите корректный адрес эл. почты&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C55</id>
+				<title>Ввод email с пробелами в доменном имени</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “”Электронная почта“</preconds>
+										<steps>1. Введите iv an@.ru
+2. Нажмите Enter</steps>
+										<expected>1. Электронный адрес не принят. Ошибка &quot;Введите корректный адрес эл. почты&quot;</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Проверка поля &quot;Гражданство&quot;</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C56</id>
+				<title>Выбор гражданства из выпадающего списка (РФ)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле ”Гражданство“</preconds>
+										<steps>1. Нажмите Enter</steps>
+										<expected>1. Выбранное значение принято</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C57</id>
+				<title>Выбор гражданства из выпадающего списка (не РФ)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле ”Гражданство“</preconds>
+										<steps>1. Нажмите Enter
+2. Выберите из выпадающего списка &quot;Не имею гражданства РФ&quot;</steps>
+										<expected>1. Появляется дополнительное поле для выбора страны принадлежности</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Проверка поля выбора нероссийского гражданства</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C58</id>
+				<title>Выбор страны из выпадающего списка</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Выбрал в поле &quot;Гражданство&quot; &quot;Не имею гражданства РФ&quot;
+Установил курсор в поле “Укажите страну“</preconds>
+										<steps>1. Кликните по полю “Ваш город или регион“
+2. Выберите первый предложенный вариант из выпадающего списка</steps>
+										<expected>1. Выбранное значение принято: индикатор &quot;зеленая галка&quot; в конце строки
+</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C66</id>
+				<title>Ручной ввод страны Россия</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Выбрал в поле &quot;Гражданство&quot; &quot;Не имею гражданства РФ&quot;
+Установил курсор в поле “Укажите страну“</preconds>
+										<steps>1. Кликните по полю “Ваш город или регион“
+2. Введите &quot;Россия&quot;
+3. Нажмите Enter
+</steps>
+										<expected>1. Ошибка &quot;Выберите страну из выпадающего списка&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C59</id>
+				<title>Выбор страны ручным набором (смешанный регистр) + подсказкой фильтра</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/
+Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Установил курсор в поле “Укажите страну“</preconds>
+										<steps>1. Кликните по полю “Укажите страну“
+2. Начните вводить &quot;Авс&quot;
+4. Выберите из выпадающего списка первый предложенный вариант.
+</steps>
+										<expected>1. Выбранное значение принято: индикатор &quot;зеленая галка&quot; в конце строки
+</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C60</id>
+				<title>Выбор страны ручным набором (нижний регистр) + подсказкой фильтра</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Выбрал в поле &quot;Гражданство&quot; &quot;Не имею гражданства РФ&quot;
+Установил курсор в поле “Укажите страну“</preconds>
+										<steps>1. Кликните по полю “Укажите страну“
+2. Начните вводить &quot;авс&quot;
+4. Выберите из выпадающего списка первый предложенный вариант.
+</steps>
+										<expected>1. Выбранное значение принято: индикатор &quot;зеленая галка&quot; в конце строки
+</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C61</id>
+				<title>Выбор страны ручным набором (верхний регистр) + подсказкой фильтра</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Выбрал в поле &quot;Гражданство&quot; &quot;Не имею гражданства РФ&quot;
+Установил курсор в поле “Укажите страну“</preconds>
+										<steps>1. Кликните по полю “Укажите страну“
+2. Удалите предложенный формой вариант.
+3. Начните вводить &quot;АВС&quot;
+4. Выберите из выпадающего списка первый предложенный вариант.
+</steps>
+										<expected>1. Выбранное значение принято: индикатор &quot;зеленая галка&quot; в конце строки
+</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C62</id>
+				<title>Ввод только цифр</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Выбрал в поле &quot;Гражданство&quot; &quot;Не имею гражданства РФ&quot;
+Установил курсор в поле “Укажите страну“</preconds>
+										<steps>1. Кликните по полю “Укажите страну“
+2. Введите &quot;11111&quot;
+3. Нажмите Enter
+
+
+</steps>
+										<expected>1. Значение не принято
+2. Ошибка &quot;Выберите страну из выпадающего списка&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C63</id>
+				<title>Ввод только спецсимволов</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Выбрал в поле &quot;Гражданство&quot; &quot;Не имею гражданства РФ&quot;
+Установил курсор в поле “Укажите страну“</preconds>
+										<steps>1. Кликните по полю “Укажите страну“
+2. Удалите предложенный формой вариант.
+3. Введите &quot;&amp;&amp;&amp;&amp;&quot;
+4. Нажмите Enter
+
+
+</steps>
+										<expected>1. Значение не принято
+2. Ошибка &quot;Выберите страну из выпадающего списка&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C64</id>
+				<title>Пустой ввод</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Выбрал в поле &quot;Гражданство&quot; &quot;Не имею гражданства РФ&quot;
+Установил курсор в поле “Укажите страну“</preconds>
+										<steps>1. Кликните по полю “Укажите страну“
+2. Удалите предложенный формой вариант.
+3. Нажмите Enter
+
+
+</steps>
+										<expected>1. Значение не принято
+2. Ошибка &quot;Поле обязательное&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C65</id>
+				<title>Ввод набора букв</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Выбрал в поле &quot;Гражданство&quot; &quot;Не имею гражданства РФ&quot;
+Установил курсор в поле “Укажите страну</preconds>
+										<steps>1. Кликните по полю “Укажите страну“
+2. Удалите предложенный формой вариант.
+3. Введите &quot;Трунь&quot;
+3. Нажмите Enter
+
+
+</steps>
+										<expected>1. Значение не принято
+2. Ошибка &quot;Выберите страну из выпадающего списка&quot;</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Проверка поля согласия</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C68</id>
+				<title>Отжать галку</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”</preconds>
+										<steps>1. Нажмите на галку в поле &quot;Я принимаю&quot;</steps>
+										<expected>1. Галка отжалась
+2. Сменила цвет с желтого на серый</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C69</id>
+				<title>Нажать галку</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Пользователь отжал галку в поле &quot;Я принимаю&quot;</preconds>
+										<steps>1. Нажмите на галку в поле &quot;Я принимаю&quot;</steps>
+										<expected>1. Галка нажалась
+2. Сменила цвет с серого на желтый</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Проверка активной ссылки</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C70</id>
+				<title>Активная ссылка открывается по нажатию</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”</preconds>
+										<steps>1. Нажмите на активную ссылку &quot;условия передачи информации&quot;</steps>
+										<expected>1. Открывается текстовое окно с Условиями передачи информации</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C71</id>
+				<title>Условия передачи данных закрываются по нажатию на Х</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Нажал на активную ссылку &quot;условия передачи информации&quot;
+Пользователь читает Условия передчи информации</preconds>
+										<steps>1. Нажмите значок Х в верхнем правом углу</steps>
+										<expected>1. Форма Условий передачи информации закрылась
+2. Пользователь возвращен к заполнению формы заказа сим-карты</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C72</id>
+				<title>Условия передачи данных закрываются по нажатию на Esc</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+Нажал на активную ссылку &quot;условия передачи информации&quot;
+Пользователь читает Условия передчи информации</preconds>
+										<steps>1. Нажмите кнопку Esc </steps>
+										<expected>1. Форма Условий передачи информации закрылась
+2. Пользователь возвращен к заполнению формы заказа сим-карты</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Проверка кнопки &quot;Заказать&quot;</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C73</id>
+				<title>Активность кнопки по наведению курсора</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”</preconds>
+										<steps>1. Наведите курсор на кнопку &quot;Далее&quot;</steps>
+										<expected>1. Кнопка меняет оттенок
+2. Знак курсора заменяется на другой спецзнак</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+			<section>
+		<name>Дополнительные проверки</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Проверка орфографии форм и нотификейшенов</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C87</id>
+				<title>Проверка орфографии строки &quot;Ваш регион или город&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. Убедитесь, что наименование поля &quot;Ваш город или регион&quot; написано без орфографических ошибок </steps>
+										<expected>1. &quot;Ваш город или регион&quot; написано без ошибок</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C88</id>
+				<title>Проверка орфографии ошибки строки &quot;Ваш регион или город&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. Удалите содержание строки &quot;Ваш город или регион&quot; 
+2. Напишите Трунь
+3. Нажмите Enter
+4. Проверьте, что нотификейшн ошибки написан без ошибок &quot;Введите другой регион&quot;</steps>
+										<expected>1. Нотификейшн ошибки написан без ошибок &quot;Введите другой регион&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C89</id>
+				<title>Проверка орфографии строки &quot;Фамилия, имя и отчество&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. Убедитесь, что наименование поля &quot;Фамилия, имя и отчество&quot; написано без орфографических ошибок </steps>
+										<expected>1. &quot;Фамилия, имя и отчество&quot; написано без ошибок</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C90</id>
+				<title>Проверка орфографии ошибки строки &quot;Фамилия, имя и отчество&quot; при слитном написании</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. В поле &quot;Фамилия, имя и отчество&quot; напишите ИИИ 
+2. Нажмите Enter
+3. Проверьте, что нотификейшн ошибки написан без ошибок &quot;Недостаточно информации. Введите фамилию, имя и отчество через пробел (Например: Иванов Иван Алексеевич)&quot;</steps>
+										<expected>1. Нотификейшн ошибки написан без ошибок &quot;Недостаточно информации. Введите фамилию, имя и отчество через пробел (Например: Иванов Иван Алексеевич)&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C91</id>
+				<title>Проверка орфографии ошибки строки &quot;Фамилия, имя и отчество&quot; при превышении 133 знаков</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. В поле &quot;Фамилия, имя и отчество&quot; напишите ФИО из 134 символов &quot;Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Олеся Ол&quot; 
+2. Нажмите Enter
+3. Проверьте, что нотификейшн ошибки написан без ошибок &quot;Максимальное количество символов – 133&quot;
+
+</steps>
+										<expected>1. Нотификейшн ошибки написан без ошибок &quot;Максимальное количество символов – 133&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C92</id>
+				<title>Проверка орфографии ошибки строки &quot;Фамилия, имя и отчество&quot; при написании английскими буквами</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. В поле &quot;Фамилия, имя и отчество&quot; напишите ФИО из John Smith
+2. Нажмите Enter
+3. Проверьте, что нотификейшн ошибки написан без ошибок &quot;Допустимо использовать только буквы русского алфавита и дефис&quot;
+
+</steps>
+										<expected>1. Нотификейшн ошибки написан без ошибок &quot;&quot;Допустимо использовать только буквы русского алфавита и дефис&quot;&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C93</id>
+				<title>Проверка орфографии строки &quot;Контактный телефон&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. Убедитесь, что наименование поля &quot;Контактный телефон&quot; написано без орфографических ошибок </steps>
+										<expected>1. &quot;Контактный телефон&quot; написано без ошибок</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C94</id>
+				<title>Проверка орфографии ошибки строки &quot;Контактный телефон&quot; при ошибки в выборе оператора</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. В поле &quot;Контактный телефон&quot; напишите 1111111111
+2. Нажмите Enter
+3. Проверьте, что нотификейшн ошибки написан без ошибок &quot;Код оператора должен начинаться с цифры 9&quot;</steps>
+										<expected>1. Нотификейшн ошибки написан без ошибок &quot;Код оператора должен начинаться с цифры 9&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C95</id>
+				<title>Проверка орфографии ошибки строки &quot;Контактный телефон&quot; при ошибки недостаточном количестве цифр</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. В поле &quot;Контактный телефон&quot; напишите 911111111
+2. Нажмите Enter
+3. Проверьте, что нотификейшн ошибки написан без ошибок &quot;Номер телефона должен состоять из 10 цифр, начиная с кода оператора&quot;</steps>
+										<expected>1. Нотификейшн ошибки написан без ошибок &quot;Номер телефона должен состоять из 10 цифр, начиная с кода оператора&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C96</id>
+				<title>Проверка орфографии строки &quot;Электронная почта&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. Убедитесь, что наименование поля &quot;Электронная почта&quot; написано без орфографических ошибок </steps>
+										<expected>1. &quot;Электронная почта&quot; написано без ошибок</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C97</id>
+				<title>Проверка орфографии ошибки строки &quot;Электронная почта&quot; при ошибки в написании</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. В поле &quot;Электронная почта&quot; напишите @@mailru
+2. Нажмите Enter
+3. Проверьте, что нотификейшн ошибки написан без ошибок &quot;Введите корректный адрес эл. почты&quot;</steps>
+										<expected>1. Нотификейшн ошибки написан без ошибок &quot;Введите корректный адрес эл. почты&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C98</id>
+				<title>Проверка орфографии строки &quot;Гражданство&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. Убедитесь, что наименование поля &quot;Гражданство&quot; написано без орфографических ошибок </steps>
+										<expected>1. &quot;Гражданство&quot; написано без ошибок</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C99</id>
+				<title>Проверка орфографии строки &quot;Укажите страну&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. В строке &quot;Гражданство&quot; выберите из выпадающего списка &quot;Не имею гражданства РФ&quot;
+2. Убедитесь, что в появившемся поле &quot;Укажите страну&quot; нет орфографических ошибок </steps>
+										<expected>1. &quot;Укажите страну&quot; написано без ошибок</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C100</id>
+				<title>Проверка орфографии ошибки строки &quot;Укажите страну&quot; при ошибки в написании</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. В поле &quot;Гражданство&quot; выберите пункт &quot;Не имею гражданства РФ&quot;
+2. В появившемся поле укажите слово Трунь
+2. Нажмите Enter
+3. Проверьте, что нотификейшн ошибки написан без ошибок &quot;Выберите страну из выпадающего списка&quot;</steps>
+										<expected>1. Нотификейшн ошибки написан без ошибок &quot;Выберите страну из выпадающего списка&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C101</id>
+				<title>Проверка орфографии строки &quot;Я согласен&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты https://www.tinkoff.ru/mobile-operator/</preconds>
+										<steps>1. Убедитесь, что строка &quot;Я принимаю условия передачи информации&quot; написано без орфографических ошибок </steps>
+										<expected>1. &quot;Я принимаю условия передачи информации&quot; написано без ошибок</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Проверка tab_order</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C86</id>
+				<title>Проверка tab_order</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”</preconds>
+										<steps>1. Установите курсор в поле &quot;Ваш город или регион&quot;
+2. Нажмите кнопку TAB 8 раз.</steps>
+										<expected>1. По нажатию на кнопку TAB курсор переходит на следующее поле</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Проверка отправки дублирующей заявки</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C103</id>
+				<title>Отправка заявки с дублирующими данными</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+</preconds>
+										<steps>1. В поле “Ваш город или регион” выберите “г Москва”
+2. В поле “Фамилия, имя и отчество” впишите Петров Сергей Игоревич
+3. В поле “Контактный телефон” впишите 91111111111
+4. Нажмите кнопку “Далее” для перехода в форму “Назначение встречи”
+5. Обновите страницу, нажав Ctrl+R 
+6. В поле “Ваш город или регион” выберите “г Москва”
+7. В поле “Фамилия, имя и отчество” впишите Петров Сергей Игоревич
+8. В поле “Контактный телефон” впишите 91111111111
+9. Нажмите кнопку “Далее”</steps>
+										<expected>1. Система выводит на экран нотификейшн “Спасибо! Мы уже получили первую часть вашей заявки, пожалуйста, заполните адрес и время доставки для завершения процедуры заказа сим-карты”</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Проверка возможности внесения изменений в форму заказа сим-карты</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C102</id>
+				<title>Возврат к форме &quot;Заказа сим-карты&quot; из формы &quot;Назначение встречи&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”</preconds>
+										<steps>1. В поле “Ваш город или регион” выберите “г Москва”
+2. В поле “Фамилия, имя и отчество” впишите Петров Сергей Игоревич
+3. В поле “Контактный телефон” впишите 91111111111
+4. Нажмите кнопку “Далее”
+5. Нажмите кнопку (стрелку) назад в строке браузера</steps>
+										<expected>1. Пользователь возвращается к форме “Заказа сим-карты”, где ранее введенные данные доступны для внесения правок
+</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+			<section>
+		<name>Попарная проверка полей обязательных для ввода</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C79</id>
+				<title>Область (1) ФИО (1) Телефон (1)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+</preconds>
+										<steps>1. Установите курсор в поле &quot;Ваш город или регион&quot; 
+2. Удалите значение установленное по умолчанию
+3. Введите Москва
+4. Из выпадающего списка выберите &quot;г Москва&quot;
+5. В поле &quot;Фамилия, имя и отчество&quot; введите &quot;Иванов Сергей Петрович&quot;
+6. Нажмите Enter
+7. В поле &quot;Контактный телефон&quot; введите 9111111111
+8. Нажмите Enter
+9. Нажмите кнопку &quot;Далее&quot;</steps>
+										<expected>1. Происходит автоматический переход на форму &quot;Назначение встречи&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C83</id>
+				<title>Область (1) ФИО (0) Телефон (0)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”</preconds>
+										<steps>1. Установите курсор в поле &quot;Ваш город или регион&quot; 
+2. Удалите значение установленное по умолчанию
+3. Введите Москва
+4. Из выпадающего списка выберите &quot;г Москва&quot;
+5. В поле &quot;Фамилия, имя и отчество&quot; введите &quot;ИвановСергейПетрович&quot;
+6. Нажмите Enter
+7. В поле &quot;Контактный телефон&quot; введите 1111111111
+8. Нажмите Enter
+9. Нажмите кнопку &quot;Далее&quot;</steps>
+										<expected>1. Ошибка в поле &quot;Фамилия, имя и отчество&quot; &quot;Недостаточно информации. Введите фамилию, имя и отчество через пробел (Например: Иванов Иван Алексеевич)&quot;
+2. Ошибка в поле &quot;Контактный телефон&quot; &quot;Код оператора должен начинаться с цифры 9&quot;
+3. По нажатию на кнопку &quot;Далее&quot; переход в форму &quot;Назначение встречи&quot; не происходит</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C84</id>
+				<title>Область (0) ФИО (1) Телефон (0)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+</preconds>
+										<steps>1. Установите курсор в поле &quot;Ваш город или регион&quot; 
+2. Удалите значение установленное по умолчанию
+3. Введите Трунь
+4. Нажмите Enter
+5. В поле &quot;Фамилия, имя и отчество&quot; введите &quot;Иванов Сергей Петрович&quot;
+6. Нажмите Enter
+7. В поле &quot;Контактный телефон&quot; введите 1111111111
+8. Нажмите Enter
+9. Нажмите кнопку &quot;Далее&quot;</steps>
+										<expected>1. Ошибка в поле &quot;Ваш город или регион&quot; &quot;Введите другой регион&quot;
+2. Ошибка в поле &quot;Контактный телефон&quot; &quot;Код оператора должен начинаться с цифры 9&quot;
+3. По нажатию на кнопку &quot;Далее&quot; переход в форму &quot;Назначение встречи&quot; не происходит</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C85</id>
+				<title>Область (0) ФИО (0) Телефон (1)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Пользователь перешел к форме заказа сим-карты на сайте https://www.tinkoff.ru/mobile-operator/ , нажав кнопку “Заказать сим-карту”
+</preconds>
+										<steps>1. Установите курсор в поле &quot;Ваш город или регион&quot; 
+2. Удалите значение установленное по умолчанию
+3. Введите Москва
+4. Из выпадающего списка выберите &quot;г Москва&quot;
+5. Нажмите Enter
+6. В поле &quot;Фамилия, имя и отчество&quot; введите &quot;ИвановСергейПетрович&quot;
+7. Нажмите Enter
+8. В поле &quot;Контактный телефон&quot; введите 9111111111
+9. Нажмите Enter
+10. Нажмите кнопку &quot;Далее&quot;</steps>
+										<expected>1. Ошибка в поле &quot;Фамилия, имя и отчество&quot; &quot;Недостаточно информации. Введите фамилию, имя и отчество через пробел (Например: Иванов Иван Алексеевич)&quot;
+2. По нажатию на кнопку &quot;Далее&quot; переход в форму &quot;Назначение встречи&quot; </expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>
